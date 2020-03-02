@@ -60,7 +60,8 @@ services:
       - ./nextcloud/apps:/var/www/html/apps
       - ./nextcloud/config:/var/www/html/config
       - ./nextcloud/data:/var/www/html/data
-      
+    environment:
+      - NEXTCLOUD_UPDATE=1
     networks:
       - proxy-tier
     restart: on-failure
